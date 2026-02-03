@@ -1,0 +1,20 @@
+[package]
+name = "mongodb_logger"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = { version = "0.4", features = ["std", "serde"]}
+serde = "1.0.144"
+
+[dependencies.mongodb]
+version = "2.3.0"
+default-features = false
+features = ["async-std-runtime"]
+
+[dependencies.async-std]
+version = "1.7.0"
+default-features = false
+features = ["std"]
